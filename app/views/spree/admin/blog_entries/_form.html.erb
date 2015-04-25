@@ -1,4 +1,4 @@
-
+<%=javascript_include_tag '/plugins/ckeditor/ckeditor.js'%>
 <div class="row">
   <div class="alpha ten columns">
 
@@ -88,7 +88,7 @@
 
 <%= form.field_container :body do %>
   <%= form.label :body %> <span class="required">*</span><br />
-  <%= form.text_area :body, {:cols => 60, :rows => 4, :class => 'fullwidth', :id => 'blog_entry_body'} %>
+  <%= form.text_area :body, {:cols => 60, :rows => 4, :class => 'fullwidth ckeditor', :id => 'blog_entry_body'} %>
   <%= form.error_message_on :body %>
 <% end %>
 
