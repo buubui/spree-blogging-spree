@@ -1,16 +1,18 @@
-/*
- *= require store/spree_frontend
-*/
-
 .blog_author_info {
   margin-bottom: 30px;
+}
+#blog_entry_container {
+  margin: 50px 20px;
+}
+.blog_title {
+  text-align: center;
 }
 .blog_entry_body {
   margin: 10px 0;
 }
 .blog_entry_summary{
   margin: 10px 0;
-} 
+}
 ul#blog_entry_entries {
   list-style: none;
 
@@ -18,7 +20,7 @@ ul#blog_entry_entries {
 }
 
 /* tag cloud widget */
-.blog_tag_cloud { 
+.blog_tag_cloud {
   margin-bottom: 10px;
 
   li { display: inline-block; }
@@ -29,7 +31,7 @@ ul#blog_entry_entries {
 }
 
 /* recent blog entries widget */
-.recent_blog_entries { 
+.recent_blog_entries {
   margin-bottom: 10px;
 
   .blog_entry_date {
@@ -44,12 +46,12 @@ ul#blog_entry_entries {
   list-style: none;
 
   a { font-weight: bold; }
-  ul { 
-    list-style: none; 
-    margin-left: 16px; 
+  ul {
+    list-style: none;
+    margin-left: 16px;
   }
-  ul ul { 
-    list-style: none; 
+  ul ul {
+    list-style: none;
     margin-left: 24px;
 
     a { font-weight: normal; }

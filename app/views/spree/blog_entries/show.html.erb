@@ -1,8 +1,17 @@
 <div id="content" class="wrap">
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3&appId=<%=ENV['FACEBOOK_APP_ID']%>";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
   <div id="blog_entry_container">
     <div id="blog_entry_entry">
 
-      <h1><%= @blog_entry.title %></h1>
+      <h1 class='blog_title'><%= @blog_entry.title %></h1>
 
       <div class="blog_entry_body">
         <%== @blog_entry.body %>
@@ -12,6 +21,8 @@
     </div>
 
     <%= render :partial => 'spree/blog_entries/comments', :locals => {:blog_entry => @blog_entry}  %>
+    <script type="text/javascript">var GETSOCIAL_ID = "<%=ENV['GETSOCIAL_ID']%>";var GETSOCIAL_LANG = "en"; (function() { var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true; po.src = '//api.at.getsocial.io/widget/v1/gs_async.js?id='+GETSOCIAL_ID; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s); })();</script>
+
   </div>
 
   <% content_for :sidebar do %>
